@@ -1,0 +1,73 @@
+# HEFAS Interns
+
+Hello everyone, my name is Austin! I'm the Outreach Coordinator for HEFAS this year. A little background about me:
+                                          I came to the U.S. from Hong Kong almost three years ago. I enjoy playing basketball,
+                                          driving around, and exploring new places. My dream is to take a road trip all over
+                                          the U.S. I'm currently a sophomore at De Anza College. I love hearing stories, especially
+                                          from new immigrants, and I hope I can help them fit into the States faster and make
+                                          them feel at home.
+
+Hello everyone! My name is Natalia Jaramillo and I’m going to be the Public Relations Coordinator for UndocuSTEM during the 2024-2025
+                                          academic year! My pronouns are she/her/ella. I am a Colombian first-generation college
+                                          student and immigrant. I am majoring in Neuroscience/Human Biology and I am hoping
+                                          to transfer to UCLA, UC Berkeley or UC Davis. During my free time, I enjoy spending
+                                          time with my mom and my dog. I am really excited to support other students to pursue
+                                          their dreams and be successful!
+
+Hi everyone! My name is Lucas Zhang, and I’ll be the Center Coordinator for HEFAS for the 2024-2025 academic year! My
+                                          pronouns are he/him, and I’m a first-generation Chinese college student. This is my
+                                          second year at De Anza College, where I’m majoring in Computer Science and Engineering,
+                                          with hopes of transferring to one of the UCs. In addition to my passion for technology
+                                          and helping students, I also love rock and roll music. I’m excited to support our
+                                          community and create a welcoming environment where everyone feels empowered to succeed.
+
+Hi everyone! It’s Bryan, your friendly neighborhood outreach coordinator for UndocuSTEM on Campus! Currently,
+                                          I’m a second-year Mechanical Engineering student at De Anza College – so yes, I swear
+                                          I’m not procrastinating, just optimizing my study schedule. As a first-generation
+                                          student, I'm on a heroic quest to overcome the challenges of academia to make my parents
+                                          proud... one syllabus at a time. So if you're looking for outreach, STEM, or someone
+                                          who understands the struggle of balancing formulas with late-night snacks, I'm your
+                                          guy! Take care everyone, you’ll probably see me roaming around campus often so please
+                                          stop me to say hi. Peace!
+
+Hello everyone! My name is Yessenia Hernandez Lopez (she/her/Ella), and I’ll be the Mental health Coordinator this academic year! I am
+                                          a first-generation college student majoring in Psychology and hoping to transfer to
+                                          UC. In my free time, I enjoy watching TV shows, practicing Pilates at home, running,
+                                          and swimming. I am excited about this internship opportunity, and one of my goals
+                                          is to combat mental health stigma by providing students with resources, regardless
+                                          of their background.
+
+Hello everyone! My name is Laila Zarate and I will be the UndocuSTEM Membership Coordinator for the 2024-2025 academic year.
+                                          My pronouns are she/her/ella and I’m a Mexican first-generation college student. I
+                                          am currently in my second year, majoring in economics, and planning to transfer to
+                                          a four-year and work in government/law. I love being with friends, family, going to
+                                          the beach, and doing spontaneous things. I have a passion for social justice and being
+                                          involved in projects/organizations that aim to help the younger generation thrive
+                                          in their passions as well. I also have an interest in connecting with others, and
+                                          by being member coordinator I plan to learn as much as I can to help grow and uplift
+                                          our members within the De Anza community!
+
+Hi everyone, my name is Gabby Fajardo (she/her), and I am this year’s Public Relations Coordinator at HEFAS. As a first-generation
+                                          sociology major, I’m passionate about social justice and advocacy, and I hope to transfer
+                                          to a university to continue my journey of supporting and empowering my community.
+                                          In my free time, I enjoy going to concerts, watching movies, and spending time in
+                                          nature.
+
+Hello everyone! I'm Daryel Hernandez (He/Him), and I'm excited to introduce myself as this year's UndocuSTEM Event Coordinator.
+                                          A little bit about me: I'm originally from the Valley and come from a Mexican and
+                                          Peruvian background. I love playing games, being active around campus, watching video
+                                          essays, and learning about my cultural roots. I am currently pursuing a double major
+                                          in Psychology and Political Science, with my sights set on transferring to UCLA or
+                                          UC Berkeley in the fall of 2025, where I plan to pursue Immigration Law.
+
+Hello! my name is Matsuko Estrada Nakamatsu, I’m a third-year student at De Anza College, my pronouns are (she/her/ella) and
+                                          I am a mixed woman of Okinawan, Peruvian, and Japanese ethnicity. As Member Coordinator
+                                          of HEFAS and former Special Projects Coordinator for UndocuSTEM, I work to support
+                                          undocumented and underserved students. I’m also the co-owner and founder of Dones
+                                          y Talentos Dance Academy, where I enjoy dancing and competing. Outside of advocacy
+                                          and dance, I love painting, cooking, and writing poetry, which help me stay connected
+                                          to my roots.
+
+Find Us On Social Media
+
+21250 Stevens Creek Blvd., Cupertino, CA 95014
