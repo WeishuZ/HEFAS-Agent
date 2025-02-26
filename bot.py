@@ -25,24 +25,19 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    # 如果消息来自机器人本身，则忽略
     if message.author == bot.user:
-        return
+        return  
 
-    # 处理用户消息
-    if message.content:
+    if bot.user.mentioned_in(message):  
         try:
-            # 使用聊天功能
             response = agent.chat(message.content, history=None)
-            
-            # 发送响应
             await message.channel.send(response)
         except Exception as e:
-            await message.channel.send("抱歉，处理消息时出现错误。")
-            print(f"错误: {str(e)}")
+            await message.channel.send("Sorry, I have some issue while dealing the message。")
+            print(f"Error: {str(e)}")
 
-    # 允许命令处理
-    await bot.process_commands(message)
+    await bot.process_commands(message)  # 允许命令继续执行
+
 
 # 运行机器人
 bot.run(TOKEN) 
