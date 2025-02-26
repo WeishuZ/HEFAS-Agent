@@ -21,8 +21,8 @@ class ChatAgent:
         
         # 加载环境变量
         load_dotenv()
-        os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY', 'your-key-if-not-using-env')
-        
+        OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', 'your-key-if-not-using-env')
+        print(f"Loaded API Key: {OPENAI_API_KEY}") 
         # 初始化向量数据库
         self.vectorstore = self._initialize_vectorstore(knowledge_base_path)
         
