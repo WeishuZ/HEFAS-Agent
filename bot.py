@@ -28,7 +28,7 @@ async def on_message(message):
     if message.author == bot.user:
         return  
 
-    if bot.user.mentioned_in(message):  
+    if bot.user.mentioned_in(message) or message.guild is None:  
         try:
             response = agent.chat(message.content, history=None)
             await message.channel.send(response)
