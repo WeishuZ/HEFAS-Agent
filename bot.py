@@ -7,6 +7,9 @@ from agent_api import ChatAgent
 # 加载环境变量
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+if not TOKEN:
+    raise ValueError("❌ Railway 未正确加载 `DISCORD_TOKEN`，请检查环境变量！")
+print(f"✅ 读取到 DISCORD_TOKEN: {TOKEN[:5]}********")
 
 # 设置机器人
 intents = discord.Intents.default()
