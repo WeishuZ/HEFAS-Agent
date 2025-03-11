@@ -1,0 +1,12 @@
+Source: https://www.deanza.edu/hefas/legislation.htmlhttps://www.deanza.edu/hefas/Members.html
+
+Title: 300 Multiple Choices
+
+URL Source: https://www.deanza.edu/hefas/legislation.htmlhttps://www.deanza.edu/hefas/Members.html
+
+Warning: This page maybe not yet fully loaded, consider explicitly specify a timeout.
+
+Markdown Content:
+The document name you requested (`/hefas/legislation.htmlhttps:/www.deanza.edu/hefas/Members.html`) could not be found on this server. However, we found documents with names similar to the one you requested.Available documents:
+
+*   [/hefas/legislation.html/www.deanza.edu/hefas/Members.html](https://www.deanza.edu/hefas/legislation.html/www.deanza.edu/hefas/Members.html) (common basename)
