@@ -9,9 +9,11 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 import datetime
 from langchain.schema import Document
+from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
+from langchain.prompts.chat import MessagesPlaceholder
 
 class ChatAgent:
-    def __init__(self, knowledge_base_path="data/*", model="gpt-4-mini", db_name="vector_db"):
+    def __init__(self, knowledge_base_path="data/*", model="gpt-4o-mini", db_name="vector_db"):
         # 初始化配置
         self.MODEL = model
         self.db_name = db_name
@@ -32,51 +34,59 @@ class ChatAgent:
         self.vectorstore = self._initialize_vectorstore(knowledge_base_path)
 
     def _initialize_vectorstore(self, knowledge_base_path):
-        """初始化向量数据库"""
-        try:
-            # 加载文档
-            loader = DirectoryLoader(knowledge_base_path, glob="**/*.txt")
-            documents = loader.load()
-            
-            if not documents:
-                print(f"⚠️ 警告：在 {knowledge_base_path} 中没有找到任何文档")
-                # 如果没有文档，创建一个包含默认消息的文档
-                documents = [Document(page_content="No documents found in knowledge base.")]
-            else:
-                print(f"✅ 成功加载了 {len(documents)} 个文档")
+        # 读取文档
+        folders = glob.glob(knowledge_base_path)
+        documents = []
+        text_loader_kwargs = {'encoding': 'utf-8'}
+        
+        for folder in folders:
+            doc_type = os.path.basename(folder)
+            loader = DirectoryLoader(folder, glob="**/*.txt", loader_cls=TextLoader,
+                                   loader_kwargs=text_loader_kwargs)
+            folder_docs = loader.load()
+            documents.extend([self._add_metadata(doc, doc_type) for doc in folder_docs])
 
-            # 分割文档
-            text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-            chunks = text_splitter.split_documents(documents)
-            print(f"✅ 文档已分割成 {len(chunks)} 个块")
+        # 检查是否有文档被加载
+        if not documents:
+            print(f"警告: 在路径 {knowledge_base_path} 中没有找到任何文档")
+            # 创建一个默认文档，避免空文档列表
+            default_content = "这是一个默认文档，因为没有找到任何知识库文档。"
+            default_doc = Document(page_content=default_content, metadata={"doc_type": "default"})
+            documents.append(default_doc)
 
-            # 创建向量数据库
-            embeddings = OpenAIEmbeddings()
-            vectorstore = Chroma.from_documents(
-                documents=chunks, 
-                embedding=embeddings,
-                persist_directory="./chroma_db"
-            )
-            print("✅ 向量数据库创建成功")
-            
-            return vectorstore
-            
-        except Exception as e:
-            print(f"❌ 创建向量数据库时出错：{str(e)}")
-            raise
+        # 分割文档
+        text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+        chunks = text_splitter.split_documents(documents)
+        
+        # 创建向量存储
+        embeddings = OpenAIEmbeddings()
+        if os.path.exists(self.db_name):
+            try:
+                Chroma(persist_directory=self.db_name, 
+                      embedding_function=embeddings).delete_collection()
+                print(f"已删除现有的向量数据库: {self.db_name}")
+            except Exception as e:
+                print(f"删除向量数据库时出错: {e}")
+        
+        print(f"正在创建向量数据库，文档数量: {len(chunks)}")
+        return Chroma.from_documents(documents=chunks, embedding=embeddings, 
+                                   persist_directory=self.db_name)
 
     def _initialize_conversation_chain(self, user_id):
         """为每个用户初始化独立的对话链"""
         llm = ChatOpenAI(
             temperature=0.7, 
-            model_name=self.MODEL,
-            system_message=self.system_prompt
+            model_name=self.MODEL
         )
+        
         memory = ConversationBufferMemory(
             memory_key='chat_history', 
             return_messages=True
         )
+        
         retriever = self.vectorstore.as_retriever(search_kwargs={"k": 25})
+        
+        # 使用默认配置创建对话链
         return ConversationalRetrievalChain.from_llm(
             llm=llm,
             retriever=retriever,
